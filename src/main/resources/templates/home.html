@@ -20,45 +20,70 @@
             <!-- Navigation links -->
             <div class="nav flex-column gap-1">
                 <h2 class="fw-bold fs-5 text-secondary">Essentials</h2>
-                <a class="text-dark" th:href="@{assets/Jackson's Resume.pdf}">Resume</a>
-                <a class="text-dark" th:href="@{#}">Projects</a> 
+                <a class="text-dark text-decoration-none" th:href="@{assets/Jackson's Resume.pdf}">Resume</a>
+                <a class="text-dark text-decoration-none" th:href="@{#}">Projects</a> 
             </div>
-            <br>
+
+            <hr class="text-secondary opacity-25 my-3">
 
             <!-- Contact information -->
             <div class="nav flex-column gap-1">
                 <h2 class="fw-bold fs-5 text-secondary">Contact</h2>
-                <a class="text-dark" href="mailto:jackson@example.com">Email</a>
-                <a class="text-dark" th:href="@{https://www.linkedin.com/in/jackson}" target="_blank">Linkedin</a> 
-                <a class="text-dark" th:href="@{https://github.com/jackson}" target="_blank">Github</a>
-                <a class="text-dark" href="tel:+14251234567">(425) 123-4567</a>
+
+                <!-- Email link with icon -->
+            <a href="mailto:jackson@example.com"
+                    class="d-flex align-items-center gap-2 p-2 text-dark text-decoration-none">
+
+                <img th:src="@{/svg images/email-1572-svgrepo-com.svg}"
+                     alt="Email icon"
+                     class="img-fluid"
+                     style="max-width: 25px;">
+
+            <span>Email</span>
+            
+            </a>
+                <a class="text-dark text-decoration-none" th:href="@{https://www.linkedin.com/in/jackson}" target="_blank">Linkedin</a> 
+                <a class="text-dark text-decoration-none" th:href="@{https://github.com/jackson}" target="_blank">Github</a>
+                <a class="text-dark text-decoration-none" href="tel:+14251234567">(425) 123-4567</a>
             </div> 
-            <br>
+
+            <hr class="text-secondary opacity-25 my-3">
 
             <!-- Location and availability -->
             <div class="nav flex-column gap-1">
-                <h2 class="fw-bold fs-5 text-secondary">Location & Availability</h2>
-                <p class="text-dark">Bluffdale UT<br> Open to new Opportunities</p>
+                <h2 class="fw-bold fs-5 text-secondary mb-2">Location & Availability</h2>
+                
+                <p class="text-dark mb-0">
+                Bluffdale UT<br> 
+                Open to new Opportunities
+            </p>
             </div>
+
+            <hr class="text-secondary opacity-25 my-3">
 
             <!-- Work experience -->
             <div class="nav flex-column gap-1">
-                <h2 class="fw-bold fs-5 text-secondary">Work Experience</h2>
+                <h2 class="fw-bold fs-5 text-secondary mb-2">Work Experience</h2>
                 <strong class="text-dark">Costco Wholesale</strong>
-                <p class="text-dark">Bakery<br> 2021 - Present</p>
+                <p class="text-dark mb-2">Bakery<br> 2021 - Present</p>
      
                 <strong class="text-dark">Cinemark Theaters</strong>
-                <p class="text-dark">Floor Staff / Shift Lead<br> 2021 - 2023</p> 
+                <p class="text-dark mb-0">Floor Staff / Shift Lead<br> 2021 - 2023</p> 
             </div>
 
+            <hr class="text-secondary opacity-25 my-3">
 
                         <!-- Skills -->
             <div class="nav flex-column gap-1">
                 <h2 class="fw-bold fs-5 text-secondary">Skills</h2>
-                <p class="text-dark">Java, Spring Boot, Thymeleaf, HTML, CSS, 
+                <p class="text-dark mb-0">Java, Spring Boot, Thymeleaf, HTML, CSS, 
                     JavaScript, Bootstraps, Database design, Git, GitHub, Cloud, MySQL, MongoDB</p>
             </div>
         </nav> <!-- End of left navigation bar -->
+
+
+
+
         <!-- Main page content -->
         <main class="col-12 col-md-9 col-lg-10 p-4">
             <h1>Welcome</h1>
