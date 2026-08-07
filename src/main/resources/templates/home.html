@@ -166,20 +166,49 @@
 <main class="col-12 col-md-9 col-lg-10 p-4">
     <div class="card shadow w-100 ms-auto">
         <div class="card-body text-end">
-            <h5 class="card-title">Welcome to My Portfolio</h5>
-            <p class="card-text">Explore my projects, skills, and experience.</p>
-            <a href="assets/Jackson's Resume.pdf"
-               target="_blank"
-               class="btn btn-primary">
-                View Resume
-            </a>
-        </div>
+
+
+<!-- Search form and profile picture -->
+<div class="d-flex align-items-center">
+    
+    <!-- Search -->
+    <form id="search-form" class="w-25 me-auto m-0 d-flex align-items-center gap-2"
+          action="/submit"
+          method="GET">
+
+        
+          
+          
+        <input
+            class="form-control flex-row"
+            type="text"
+            id="search-box"
+            name="search"
+            placeholder="Search projects, email, resume..."
+
+            >
+            <button type="submit" class="btn btn-primary me-2">Search</button>
+            
+    </form>
+
+    <!-- Profile -->
+    <div class="d-flex align-items-center gap-2">
+        <span>Jackson Wiser</span>
+
+        <img src="/images/SelfImage (2).jpeg"
+             alt="Profile Picture"
+             class="rounded-circle"
+             style="width: 40px; height: 40px; object-fit: cover;">
     </div>
+</div>
 </main> <!-- End of main content -->
 
     </div> <!-- End of row -->
 </div> <!-- End of container-fluid -->
 
+
+<!--Link to JS-->
+<script th:src="@{/javascript/home-page.js}"></script>
 
 </body>
 </html>
