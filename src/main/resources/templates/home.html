@@ -8,15 +8,19 @@
           rel="stylesheet">
     
     <link rel="stylesheet" th:href="@{/css/home-page.css}">
+    <link rel="stylesheet" th:href="@{/css/sidebar.css}">
 </head>
 <body>
+
+
+
 
     <!-- Navigation bar -->
 <div class="container-fluid">
     <div class="row min-vh-100">
 
         <!-- Left navigation bar -->
-        <nav class="col-12 col-md-3 col-lg-2 bg-white p-3 shadow p-3">
+        <nav class="sidebar col-12 col-md-3 col-lg-2 bg-white p-3 shadow p-3 overflow-auto" style="height: 100vh;">
             <img src ="images/NEWPVLOGO.png" alt="Pv Logo" class="img-fluid" style="max-width: 100px;">
 
             <!-- Navigation links -->
@@ -47,10 +51,6 @@
             <span>Projects</span>
 
             </div>
-
-
-
-
             </div>
 
             <hr class="text-secondary opacity-25 my-3">
@@ -135,7 +135,6 @@
             <span>Open to new opportunities</span>
             </div>
 
-
         </div>
 
             <hr class="text-secondary opacity-25 my-3">
@@ -161,12 +160,10 @@
         </nav> <!-- End of left navigation bar -->
 
 
-
 <!-- Main content area -->
 <main class="col-12 col-md-9 col-lg-10 p-4">
     <div class="card shadow w-100 ms-auto">
         <div class="card-body text-end">
-
 
 <!-- Search form and profile picture -->
 <div class="d-flex align-items-center">
@@ -175,10 +172,6 @@
     <form id="search-form" class="w-25 me-auto m-0 d-flex align-items-center gap-2"
           action="/submit"
           method="GET">
-
-        
-          
-          
         <input
             class="form-control flex-row"
             type="text"
@@ -188,7 +181,21 @@
 
             >
             <button type="submit" class="btn btn-primary me-2">Search</button>
-            
+                <!-- Redirect message -->
+                <div id="redirect-message"
+                    class="alert alert-success shadow-sm text-center position-fixed top-20 start-50 translate-middle-x mt-3 d-none"
+                    role="alert">
+                </div>
+                <!-- Error message -->
+                <div id="error-message"
+                    class="alert alert-danger shadow-sm text-center position-fixed top-20 start-50 translate-middle-x mt-3 d-none"
+                    role="alert">
+                </div>
+                <!-- Spell message -->
+                <div id="spell-message"
+                    class="alert alert-warning shadow-sm text-center position-fixed top-20 start-50 translate-middle-x mt-3 d-none"
+                    role="alert">
+                </div>
     </form>
 
     <!-- Profile -->
@@ -199,14 +206,48 @@
              alt="Profile Picture"
              class="rounded-circle"
              style="width: 40px; height: 40px; object-fit: cover;">
+            </div>
+        </div>
     </div>
-</div>
-</main> <!-- End of main content -->
+</div> <!-- End of search form and profile picture -->
 
+
+<!-- Analytics Section -->
+<section class="col-12 col-md-9 col-lg-10 pt-3 d-flex flex-row align-items-center gap-3 w-100">
+    <div class="card shadow w-50" style="height: 250px;">
+        <div class="card-body text-end">
+            <h1 class="text-center mb-4">CARD 1</h1>
+        </div>
+    </div>
+
+    <div class="card shadow w-50" style="height: 250px;">
+        <div class="card-body text-end">
+            <h1 class="text-center mb-4">CARD 2</h1>
+        </div>
+    </div>
+
+    <div class="card shadow w-50" style="height: 250px;">
+        <div class="card-body text-end">
+            <h1 class="text-center mb-4">CARD 3</h1>
+        </div>
+    </div>
+
+    <div class="card shadow w-50" style="height: 250px;">
+        <div class="card-body text-end">
+            <h1 class="text-center mb-4">CARD 4</h1>
+        </div>
+    </div>
+
+    <div class="card shadow w-50" style="height: 250px;">
+        <div class="card-body text-end">
+            <h1 class="text-center mb-4">CARD 5</h1>
+        </div>
+    </div>
+</section> <!-- End of analytics section -->
+
+</main> <!-- End of main content -->
     </div> <!-- End of row -->
 </div> <!-- End of container-fluid -->
-
-
 <!--Link to JS-->
 <script th:src="@{/javascript/home-page.js}"></script>
 
