@@ -5,20 +5,23 @@
     scrollbar-width: thin;
     scrollbar-color: #c5c9ce transparent;
 }
-
+/* For WebKit browsers (Chrome, Safari) */
 .sidebar::-webkit-scrollbar {
     width: 6px;
 }
 
+/* Optional: Change the color of the scrollbar track */
 .sidebar::-webkit-scrollbar-track {
     background: transparent;
 }
 
+/* Optional: Change the color of the scrollbar thumb */
 .sidebar::-webkit-scrollbar-thumb {
     background: #c5c9ce;
     border-radius: 20px;
 }
 
+/* Optional: Change the color of the scrollbar thumb on hover */
 .sidebar::-webkit-scrollbar-thumb:hover {
     background: #8b929a;
 }

@@ -1,5 +1,8 @@
 package com.personal.portfolio.website.repository;
 
-public class AnalyticsRepository {
-    
+import com.personal.portfolio.website.model.Analytics;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface AnalyticsRepository extends JpaRepository<Analytics, Long> {
+    // Custom query methods can be defined here if needed
 }

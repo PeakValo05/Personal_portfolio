@@ -8,6 +8,7 @@
           rel="stylesheet">
     
     <link rel="stylesheet" th:href="@{/css/home-page.css}">
+    <link rel="stylesheet" th:href="@{/css/cards.css}">
     <link rel="stylesheet" th:href="@{/css/sidebar.css}">
 </head>
 <body>
@@ -212,38 +213,39 @@
 </div> <!-- End of search form and profile picture -->
 
 
+
+
+
 <!-- Analytics Section -->
-<section class="col-12 col-md-9 col-lg-10 pt-3 d-flex flex-row align-items-center gap-3 w-100">
-    <div class="card shadow w-50" style="height: 250px;">
-        <div class="card-body text-end">
-            <h1 class="text-center mb-4">CARD 1</h1>
+<section class="analytics col-12 col-md-9 col-lg-10 pt-4 d-flex flex-row align-items-center gap-3 w-100">
+    <div th:each ="analytics : ${analyticsList}" class="card shadow w-50" style="height: 250px;">
+            <h1 class="analytics-card-title text-center mb-4" th:text="${analytics.name}">CARD 2</h1>
+            <p class="analytics-card-text text-center mb-4" th:text="${analytics.quantity} + '+'">Quantity</p>
         </div>
-    </div>
-
-    <div class="card shadow w-50" style="height: 250px;">
-        <div class="card-body text-end">
-            <h1 class="text-center mb-4">CARD 2</h1>
-        </div>
-    </div>
-
-    <div class="card shadow w-50" style="height: 250px;">
-        <div class="card-body text-end">
-            <h1 class="text-center mb-4">CARD 3</h1>
-        </div>
-    </div>
-
-    <div class="card shadow w-50" style="height: 250px;">
-        <div class="card-body text-end">
-            <h1 class="text-center mb-4">CARD 4</h1>
-        </div>
-    </div>
-
-    <div class="card shadow w-50" style="height: 250px;">
-        <div class="card-body text-end">
-            <h1 class="text-center mb-4">CARD 5</h1>
-        </div>
-    </div>
 </section> <!-- End of analytics section -->
+
+
+
+
+<!-- Skills Section -->
+<div class="skill-card card shadow w-50 ms-auto mt-3" style="height: 400px; overflow-y: auto;">
+    <div class="card-body">
+
+        <div th:each="skill : ${skillsList} " class="d-flex align-items-center gap-3 mb-3 ms-4">
+            <h2 class="card-title me-auto"
+                th:text="${skill.name}">
+                Skill Name
+            </h2>
+
+            <img th:src="@{${skill.imageUrl}}"
+                 th:alt="${skill.name}"
+                    
+                 class="img-fluid">
+        </div>
+
+    </div>
+</div>
+
 
 </main> <!-- End of main content -->
     </div> <!-- End of row -->

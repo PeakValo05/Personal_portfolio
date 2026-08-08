@@ -1,0 +1,73 @@
+.analytics-card-title {
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: #333;
+    padding-top: 10px;
+    letter-spacing: 5px;
+}
+.analytics-card-text {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #666;
+    padding-top: 15px;
+}
+.analytics-card {
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.products-card {
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+
+
+.img-fluid {
+    max-width: 100%;
+    width: 40px;
+    height: 40px;
+    height: auto;
+}
+
+/* Additional styling for the card title */
+.card-title {
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: #333;
+    padding-top: 10px;
+    letter-spacing: 5px;    
+}
+
+
+
+/* Additional styling for the card text */
+.skill-card {
+    height: 100vh;
+    overflow-y: auto;
+
+    scrollbar-width: thin;
+    scrollbar-color: #c5c9ce transparent;
+}
+/* For WebKit browsers (Chrome, Safari) */
+.skill-card::-webkit-scrollbar {
+    width: 6px;
+}
+
+/* Optional: Change the color of the scrollbar track */
+.skill-card::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Optional: Change the color of the scrollbar thumb */
+.skill-card::-webkit-scrollbar-thumb {
+    background: #c5c9ce;
+    border-radius: 20px;
+}
+
+/* Optional: Change the color of the scrollbar thumb on hover */
+.skill-card::-webkit-scrollbar-thumb:hover {
+    background: #8b929a;
+}
