@@ -2,9 +2,16 @@
         e.preventDefault();
         // Add your search handling logic here
         const query = document.getElementById("search-box").value;
+        // Get the redirect message element
         const message = document.getElementById("redirect-message");
+        // Get the error message element
         const errorMessage = document.getElementById("error-message");
+        // Get the spell message element
         const spellMessage = document.getElementById("spell-message");
+   
+        const projectButton = document.getElementById("projectButton");
+        const redirectMessage = document.getElementById("redirectMessage");
+        const projectButtons = document.querySelectorAll(".project-button");
         
 
         // Example: Redirect to a search results page or perform an action based on the query
@@ -105,3 +112,19 @@
             }, 3000);
         }
     }); // End of search form submission event listener
+
+    const projectButtons = document.querySelectorAll(".project-button");
+
+    projectButtons.forEach(function (button) {
+        button.addEventListener("click", function () {
+            const projectUrl = button.dataset.url;
+            const message = button.nextElementSibling;
+
+            message.classList.remove("d-none");
+
+            setTimeout(function () {
+                message.classList.add("d-none");
+                window.open(projectUrl, "_blank");
+            }, 2000);
+        });
+    });

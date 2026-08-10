@@ -226,24 +226,78 @@
 
 
 
+<div class="row mt-4 g-4 align-items-start">
 
-<!-- Skills Section -->
-<div class="skill-card card shadow w-50 ms-auto mt-3" style="height: 400px; overflow-y: auto;">
-    <div class="card-body">
+    <!-- Projects -->
+    <section class="col-12 col-lg-8">
+        <div class="card shadow border-0">
+            <div class="card-body">
+                <h2 style="letter-spacing: 5px; font-weight: bold;">Projects</h2>
 
-        <div th:each="skill : ${skillsList} " class="d-flex align-items-center gap-3 mb-3 ms-4">
-            <h2 class="card-title me-auto"
-                th:text="${skill.name}">
-                Skill Name
-            </h2>
+                <div class="row g-3">
+                    <div th:each="project : ${projectsList}"
+                         class="col-12 col-md-6">
 
-            <img th:src="@{${skill.imageUrl}}"
-                 th:alt="${skill.name}"
-                    
-                 class="img-fluid">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h3 th:text="${project.name}">Project</h3>
+                                <p th:text="${project.description}">
+                                    Description
+                                </p>
+
+                                <!-- Project button with data-url attribute -->
+                                <button class="btn btn-primary project-button"
+                                    th:attr="data-url=${project.projectUrl}">
+                                        View Project
+                                </button>
+
+                                <p class="redirect-message alert alert-info mt-3 d-none">
+                                    Redirecting you to the project...
+                                </p>
+                          
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
         </div>
+    </section>
 
-    </div>
+    <!-- Skills -->
+    <section class="col-12 col-lg-4">
+        <div class="card shadow border-0">
+            <div class="card-body" style="overflow-y: auto; max-height: 400px;">
+                <h2 style="letter-spacing: 5px; font-weight: bold;">Skills</h2>
+
+                <div class="skills-scroll">
+                    <div th:each="skill : ${skillsList}"
+                         class="d-flex align-items-center gap-3 mb-4">
+
+                        <img th:src="${skill.imageUrl}"
+                             th:alt="${skill.name}"
+                             style="width: 45px; height: 45px; object-fit: contain;">
+
+                        <div class="flex-grow-1">
+                            <h3 class="fs-6 mb-2"
+                                th:text="${skill.name}">
+                                Skill
+                            </h3>
+
+                            <div class="progress" style="height: 13px;">
+                                <div class="progress-bar"
+                                     th:style="'width: ' + ${skill.percentage} + '%;'"
+                                     th:text="${skill.percentage} + '%'">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
 </div>
 
 

@@ -71,3 +71,15 @@
 .skill-card::-webkit-scrollbar-thumb:hover {
     background: #8b929a;
 }
+
+.projects-card {
+    height: 100vh;
+    overflow-y: auto;
+
+    scrollbar-width: thin;
+    scrollbar-color: #c5c9ce transparent;
+}
+/* For WebKit browsers (Chrome, Safari) */
+.projects-card::-webkit-scrollbar {
+    width: 6px;
+}
