@@ -226,10 +226,80 @@
 
 
 
-<div class="row mt-4 g-4 align-items-start">
+
+<div class="row mt-4 g-4">
+
+
+
+    <!-- Skills -->
+    <section class="col-12 col-lg-5">
+        <div class="card shadow border-0 h-100">
+            <div class="card-body">
+
+                <h2 style="letter-spacing: 5px; font-weight: bold;">Skills</h2>
+
+                <div style="overflow-y: auto; max-height: 320px;">
+                    <div th:each="skill : ${skillsList}"
+                         class="d-flex align-items-center gap-3 mb-4">
+
+                        <img th:src="${skill.imageUrl}"
+                             th:alt="${skill.name}"
+                             style="width: 45px; height: 45px; object-fit: contain;">
+
+                        <div class="flex-grow-1">
+                            <h3 class="fs-6 mb-2"
+                                th:text="${skill.name}">
+                                Skill
+                            </h3>
+
+                            <div class="progress" style="height: 13px;">
+                                <div class="progress-bar"
+                                     th:style="'width: ' + ${skill.percentage} + '%;'"
+                                     th:text="${skill.percentage} + '%'">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section> <!-- End of skills section -->
+
+
+
+    <!-- Education -->
+    <section class="col-12 col-lg-7">
+        <div class="card shadow border-0 h-100">
+            <div class="card-body">
+                <h2 style="letter-spacing: 5px; font-weight: bold;">Education</h2>
+
+                <div class="row g-3">
+                    <div th:each="education : ${educationList}"
+                         class="col-12 col-md-6">
+
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h3 th:text="${education.schoolName}">School Name</h3>
+                                <p th:text="${education.degree}">Degree</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> <!-- End of education section -->
+
+
+
+    
+
+    <div class="row mt-2 g-4 align-items-start">
 
     <!-- Projects -->
-    <section class="col-12 col-lg-8">
+    <section class="col-12 col-lg-12 w-100">
         <div class="card shadow border-0">
             <div class="card-body">
                 <h2 style="letter-spacing: 5px; font-weight: bold;">Projects</h2>
@@ -262,43 +332,10 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> <!-- End of projects section -->
+    </div> <!-- End of row -->
 
-    <!-- Skills -->
-    <section class="col-12 col-lg-4">
-        <div class="card shadow border-0">
-            <div class="card-body" style="overflow-y: auto; max-height: 400px;">
-                <h2 style="letter-spacing: 5px; font-weight: bold;">Skills</h2>
 
-                <div class="skills-scroll">
-                    <div th:each="skill : ${skillsList}"
-                         class="d-flex align-items-center gap-3 mb-4">
-
-                        <img th:src="${skill.imageUrl}"
-                             th:alt="${skill.name}"
-                             style="width: 45px; height: 45px; object-fit: contain;">
-
-                        <div class="flex-grow-1">
-                            <h3 class="fs-6 mb-2"
-                                th:text="${skill.name}">
-                                Skill
-                            </h3>
-
-                            <div class="progress" style="height: 13px;">
-                                <div class="progress-bar"
-                                     th:style="'width: ' + ${skill.percentage} + '%;'"
-                                     th:text="${skill.percentage} + '%'">
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-</div>
 
 
 </main> <!-- End of main content -->

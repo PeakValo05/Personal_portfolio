@@ -4,6 +4,7 @@ import com.personal.portfolio.website.model.Analytics;
 import com.personal.portfolio.website.repository.AnalyticsRepository;
 import com.personal.portfolio.website.model.Project;
 import java.util.List;
+import com.personal.portfolio.website.model.Education;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import com.personal.portfolio.website.service.SkillService;
 import com.personal.portfolio.website.model.Skill;
 import com.personal.portfolio.website.service.ProjectService;
+import com.personal.portfolio.website.service.EducationService;
 
 @Controller
 public class PortfolioController {
@@ -21,10 +23,15 @@ public class PortfolioController {
 
     private final ProjectService projectService;
 
-    public PortfolioController(AnalyticsRepository analyticsRepository, SkillService skillService, ProjectService projectService) {
+    private final EducationService educationService;
+
+    
+
+    public PortfolioController(AnalyticsRepository analyticsRepository, SkillService skillService, ProjectService projectService, EducationService educationService) {
         this.analyticsRepository = analyticsRepository;
         this.skillService = skillService;
         this.projectService = projectService;
+        this.educationService = educationService;
     }
     
     // Home page
@@ -42,6 +49,10 @@ public class PortfolioController {
         // Fetch all projects and add them to the model
         List<Project> projectsList = (List<Project>) projectService.getAllProjects();
         model.addAttribute("projectsList", projectsList);
+
+        // Fetch all education entries and add them to the model
+        List<Education> educationList = (List<Education>) educationService.getAllEducations();
+        model.addAttribute("educationList", educationList);
 
         return "home";
     }
