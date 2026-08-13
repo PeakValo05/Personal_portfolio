@@ -8,6 +8,7 @@ body {
 
 .sidebar {
 
+    border: 1px solid #c5c9ce;
     background-color: #e7f1ff;
     position:  sticky;
     scrollbar-width: thin;

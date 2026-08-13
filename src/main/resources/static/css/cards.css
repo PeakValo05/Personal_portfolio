@@ -73,10 +73,14 @@ html, body {
     letter-spacing: 5px;    
 }
 
-
+.progress{
+    background-color: #ffffff;
+    border: 1px solid #c5c9ce;
+}
 
 /* Additional styling for the card text */
 .skill-card {
+
     height: 100vh;
     overflow-y: auto;
 
@@ -121,4 +125,5 @@ html, body {
     
     margin-top: 10px;
 }
+
 
