@@ -1,3 +1,9 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 .analytics-card-title {
     font-size: 1.7rem;
     font-weight: bold;
@@ -22,6 +28,32 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
 }
+.card-body-education {
+    height: 100%;
+    overflow-y: auto;
+    color: #084298;
+    background-color: #e7f1ff;
+
+    scrollbar-width: thin;
+    scrollbar-color: #c5c9ce transparent;
+
+}
+.card-body-projects,
+.card-body-skills {
+    height: 100%;
+    color: #084298;
+    background-color: #e7f1ff;
+
+    scrollbar-width: thin;
+    scrollbar-color: #c5c9ce transparent;
+}
+
+.card-body-projects h2,
+.card-body-skills h2,
+.card-body-education h2 {
+    padding-left: 10px;
+}
+
 
 
 
@@ -83,3 +115,10 @@
 .projects-card::-webkit-scrollbar {
     width: 6px;
 }
+.logos {
+    max-width: 100px;
+    height: auto;
+    
+    margin-top: 10px;
+}
+

@@ -8,6 +8,7 @@ import jakarta.persistence.*;
 @Table(name = "education")
 public class Education {
 
+    // Define the fields for the Education entity
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -24,14 +25,22 @@ public class Education {
     @Column (nullable = true)
     private Date endYear;
 
+    @Column(nullable = true)
+    private String schoolUrl;
+
+    @Column(nullable = true)
+    private String schoolLogoUrl;
+
     public Education() {
     }
 
-    public Education(String schoolName, String degree, Date startYear, Date endYear) {
+    public Education(String schoolName, String degree, Date startYear, Date endYear, String schoolUrl, String schoolLogoUrl) {
         this.schoolName = schoolName;
         this.degree = degree;
         this.startYear = startYear;
         this.endYear = endYear;
+        this.schoolUrl = schoolUrl;
+        this.schoolLogoUrl = schoolLogoUrl;
     }
 
     public Long getId() {
@@ -72,5 +81,21 @@ public class Education {
 
     public void setEndYear(Date endYear) {
         this.endYear = endYear;
+    }
+
+    public String getSchoolUrl() {
+        return schoolUrl;
+    }
+
+    public void setSchoolUrl(String schoolUrl) {
+        this.schoolUrl = schoolUrl;
+    }
+
+    public String getSchoolLogoUrl() {
+        return schoolLogoUrl;
+    }
+
+    public void setSchoolLogoUrl(String schoolLogoUrl) {
+        this.schoolLogoUrl = schoolLogoUrl;
     }
 }

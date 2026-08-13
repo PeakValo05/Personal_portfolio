@@ -12,7 +12,7 @@
         const projectButton = document.getElementById("projectButton");
         const redirectMessage = document.getElementById("redirectMessage");
         const projectButtons = document.querySelectorAll(".project-button");
-        
+  
 
         // Example: Redirect to a search results page or perform an action based on the query
         if (query.includes("project") || query.includes("projects") || 
@@ -128,3 +128,30 @@
             }, 2000);
         });
     });
+
+// Add event listeners for school buttons
+document.querySelectorAll(".school-button").forEach(function (button) {
+    button.addEventListener("click", function () {
+        const schoolUrl = button.dataset.url;
+        const message = button
+            .closest(".card-body")
+            .querySelector(".school-redirect-message");
+
+        if (!schoolUrl) {
+            console.error("School URL is missing.");
+            return;
+        }
+
+        if (message) {
+            message.classList.remove("d-none");
+        }
+
+        setTimeout(function () {
+            if (message) {
+                message.classList.add("d-none");
+            }
+
+            window.open(schoolUrl, "_blank");
+        }, 2000);
+    });
+});
