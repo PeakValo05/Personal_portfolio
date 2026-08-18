@@ -9,8 +9,13 @@
         // Get the spell message element
         const spellMessage = document.getElementById("spell-message");
    
+        // Get the project button element
         const projectButton = document.getElementById("projectButton");
+
+        // Get the redirect message element
         const redirectMessage = document.getElementById("redirectMessage");
+
+        // Get the project buttons
         const projectButtons = document.querySelectorAll(".project-button");
   
 
@@ -129,29 +134,3 @@
         });
     });
 
-// Add event listeners for school buttons
-document.querySelectorAll(".school-button").forEach(function (button) {
-    button.addEventListener("click", function () {
-        const schoolUrl = button.dataset.url;
-        const message = button
-            .closest(".card-body")
-            .querySelector(".school-redirect-message");
-
-        if (!schoolUrl) {
-            console.error("School URL is missing.");
-            return;
-        }
-
-        if (message) {
-            message.classList.remove("d-none");
-        }
-
-        setTimeout(function () {
-            if (message) {
-                message.classList.add("d-none");
-            }
-
-            window.open(schoolUrl, "_blank");
-        }, 2000);
-    });
-});

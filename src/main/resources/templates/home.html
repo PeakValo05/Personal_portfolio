@@ -10,6 +10,8 @@
     <link rel="stylesheet" th:href="@{/css/home-page.css}">
     <link rel="stylesheet" th:href="@{/css/cards.css}">
     <link rel="stylesheet" th:href="@{/css/sidebar.css}">
+    <link rel="stylesheet" th:href="@{/css/redirect-messages.css}">
+
 </head>
 <body>
 
@@ -287,18 +289,68 @@
                                 <p th:text="${education.degree}">Degree</p>
 
 
-                                <button class="btn btn-primary school-button"
-                                    th:attr="data-url=${education.schoolUrl}"
-                                    type="button">
-                                        Visit School
-                                </button>
+                <div id="redirect-overlay" class="redirect-overlay d-none"></div>
+                                <!-- GCU button and message -->
+                        <div th:if="${education.schoolName == 'Grand Canyon University'}">
 
-                            <div class="school-logo-container mt-3 d-flex justify-content-center" style="max-height: 500px; overflow: hidden;">
-                                <p class="school-redirect-message alert alert-info mt-3 d-none position-fixed text-center w-50"
-                                    style="top: 100px; left: 50%; transform: translateX(-50%); z-index: 1000; height: 75%; text-align: center; display: flex; align-items: center; justify-content: center;">
-                                        Redirecting you to the school…
-                                </p>
-                            </div>
+                            <button class="btn btn-primary school-button"
+                                th:attr="data-url=${education.schoolUrl}"
+                                data-message="gcu-message"
+                                type="button">
+                                    Visit GCU
+                            </button>
+
+                        <div id="gcu-message"
+                            class="school-redirect-message mtech-panel d-none w-25 h-25 d-flex justify-content-center align-items-center flex-column"
+                            style="color: #084298; border: 1px solid #c5c9ce;">
+
+                    <div class="circle-holder d-flex justify-content-center align-items-center" style="height: 90px; background-color: rgb(193, 207, 248);
+                     border-radius: 50%; margin-bottom: 10px; width: 90px; margin-left: auto; margin-right: auto; padding-top: 10px;">
+
+                            <img th:src="@{/svg images/graduation-cap-svgrepo-com.svg}"
+                                 alt="graduation cap Logo"
+                                 class="img-fluid"
+                                 style="width: 70px; height: 70px; object-fit: contain;">
+                        </div>
+                            <h3>Opening GCU</h3>
+                            <p>Redirecting you to Grand Canyon University…</p>
+                        </div>
+
+                        </div>
+
+
+
+
+
+                    <!-- MTECH button and message -->
+                        <div th:if="${education.schoolName == 'Mountainland Technical College'}">
+
+                            <button class="btn btn-primary school-button"
+                                th:attr="data-url=${education.schoolUrl}"
+                                data-message="mtech-message"
+                                type="button">
+                                    Visit MTECH
+                            </button>
+
+                        <div id="mtech-message"
+                            class="school-redirect-message mtech-panel d-none w-25 h-25 d-flex justify-content-center align-items-center flex-column"
+                            style="color: #084298; border: 1px solid #c5c9ce;">
+
+                    <div class="circle-holder d-flex justify-content-center align-items-center" style="height: 90px; background-color: rgb(193, 207, 248);
+                     border-radius: 50%; margin-bottom: 10px; width: 90px; margin-left: auto; margin-right: auto; padding-top: 10px;">
+
+                            <img th:src="@{/svg images/graduation-cap-svgrepo-com.svg}"
+                                 alt="graduation cap Logo"
+                                 class="img-fluid"
+                                 style="width: 70px; height: 70px; object-fit: contain;">
+                        </div>
+
+                            <h3>Opening MTECH</h3>
+                            <p>Redirecting you to Mountainland Technical College…</p>
+                        </div>
+
+                    </div>
+                        <div id="redirect-overlay" class="redirect-overlay d-none"></div>
 
 
                             
@@ -358,6 +410,7 @@
 </div> <!-- End of container-fluid -->
 <!--Link to JS-->
 <script th:src="@{/javascript/home-page.js}"></script>
+<script th:src="@{/javascript/school-redirect-messages.js}"></script>
 
 </body>
 </html>
