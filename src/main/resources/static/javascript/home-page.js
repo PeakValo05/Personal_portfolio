@@ -118,19 +118,4 @@
         }
     }); // End of search form submission event listener
 
-    const projectButtons = document.querySelectorAll(".project-button");
-
-    projectButtons.forEach(function (button) {
-        button.addEventListener("click", function () {
-            const projectUrl = button.dataset.url;
-            const message = button.nextElementSibling;
-
-            message.classList.remove("d-none");
-
-            setTimeout(function () {
-                message.classList.add("d-none");
-                window.open(projectUrl, "_blank");
-            }, 2000);
-        });
-    });
 

@@ -4,13 +4,21 @@
     <meta charset="UTF-8">
     <title>Home</title>
 
+    <!-- ===========================================
+                    BOOTSTRAP CSS
+     ===============================================-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
           rel="stylesheet">
     
+
+    <!-- ===========================================
+                    CSS STYLESHEETS
+     ===============================================-->
     <link rel="stylesheet" th:href="@{/css/home-page.css}">
     <link rel="stylesheet" th:href="@{/css/cards.css}">
     <link rel="stylesheet" th:href="@{/css/sidebar.css}">
-    <link rel="stylesheet" th:href="@{/css/redirect-messages.css}">
+    <link rel="stylesheet" th:href="@{/css/school-redirect-messages.css}">
+    <link rel="stylesheet" th:href="@{/css/project-redirect-messages.css}">
 
 </head>
 <body>
@@ -164,7 +172,9 @@
         </nav> <!-- End of left navigation bar -->
 
 
-<!-- Main content area -->
+    <!-- ===========================================
+                    MAIN CONTENT
+     ===============================================-->
 <main class="col-12 col-md-9 col-lg-10 ps-4 pe-0 py-4">
 
 
@@ -223,7 +233,9 @@
 
 
 
-<!-- Analytics Section -->
+    <!-- ===========================================
+                    ANALYTICS SECTION
+     ===============================================-->
 <section class="analytics-body col-12 col-md-9 col-lg-10 mt-4 d-flex flex-row align-items-center gap-3 w-100">
     <div th:each ="analytics : ${analyticsList}" class="card shadow w-50" style="height: 250px; background-color: #e7f1ff;">
             <h1 class="analytics-card-title text-center mb-4" th:text="${analytics.name}">CARD 2</h1>
@@ -235,7 +247,9 @@
 
 
 <div class="row mt-1 g-4">
-    <!-- Skills -->
+        <!-- ===========================================
+                    SKILLS SECTION
+     ===============================================-->
     <section class="col-12 col-lg-5">
         <div class="card shadow border-0 h-100">
             <div class="card-body-skills" style="background-color: #e7f1ff; color: #084298; border: 1px solid #c5c9ce; border-radius: 5px;">
@@ -273,7 +287,9 @@
 
 
 
-    <!-- Education -->
+    <!-- ===========================================
+                    EDUCATION SECTION 
+     ===============================================-->
     <section class="col-12 col-lg-7">
         <div class="card shadow border-0 h-100">
             <div class="card-body-education" style="background-color: #e7f1ff; color: #084298; border: 1px solid #c5c9ce; border-radius: 5px;">
@@ -301,19 +317,28 @@
                             </button>
 
                         <div id="gcu-message"
-                            class="school-redirect-message mtech-panel d-none w-25 h-25 d-flex justify-content-center align-items-center flex-column"
+                            class="school-redirect-message mtech-panel d-none w-25 h-25 justify-content-center align-items-center flex-column"
                             style="color: #084298; border: 1px solid #c5c9ce;">
 
-                    <div class="circle-holder d-flex justify-content-center align-items-center" style="height: 90px; background-color: rgb(193, 207, 248);
-                     border-radius: 50%; margin-bottom: 10px; width: 90px; margin-left: auto; margin-right: auto; padding-top: 10px;">
+                    <div class="circle-holder d-flex justify-content-center align-items-center" style="height: 70px; background-color: rgb(193, 207, 248);
+                     border-radius: 50%; margin-top: 10px; width: 70px; margin-left: auto; margin-right: auto; padding-top: 10px;">
 
                             <img th:src="@{/svg images/graduation-cap-svgrepo-com.svg}"
                                  alt="graduation cap Logo"
                                  class="img-fluid"
-                                 style="width: 70px; height: 70px; object-fit: contain;">
+                                 style="width: 50px; height: 50px; object-fit: contain;">
                         </div>
                             <h3>Opening GCU</h3>
                             <p>Redirecting you to Grand Canyon University…</p>
+
+                                <!-- ===========================================
+                                            LOADING DOTS ANIMATION
+                                ===============================================-->
+                            <div class="loading-dots">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
                         </div>
 
                         </div>
@@ -322,7 +347,9 @@
 
 
 
-                    <!-- MTECH button and message -->
+                        <!-- ===========================================
+                                    MTECH button and message 
+                        ===============================================-->
                         <div th:if="${education.schoolName == 'Mountainland Technical College'}">
 
                             <button class="btn btn-primary school-button"
@@ -333,20 +360,28 @@
                             </button>
 
                         <div id="mtech-message"
-                            class="school-redirect-message mtech-panel d-none w-25 h-25 d-flex justify-content-center align-items-center flex-column"
+                            class="school-redirect-message mtech-panel d-none w-25 justify-content-center align-items-center flex-column"
                             style="color: #084298; border: 1px solid #c5c9ce;">
 
-                    <div class="circle-holder d-flex justify-content-center align-items-center" style="height: 90px; background-color: rgb(193, 207, 248);
-                     border-radius: 50%; margin-bottom: 10px; width: 90px; margin-left: auto; margin-right: auto; padding-top: 10px;">
+                    <div class="circle-holder d-flex justify-content-center align-items-center" style="height: 70px; background-color: rgb(193, 207, 248);
+                     border-radius: 50%; margin-top: 10px; width: 70px; margin-left: auto; margin-right: auto; padding-top: 10px;">
 
                             <img th:src="@{/svg images/graduation-cap-svgrepo-com.svg}"
                                  alt="graduation cap Logo"
                                  class="img-fluid"
-                                 style="width: 70px; height: 70px; object-fit: contain;">
+                                 style="width: 50px; height: 50px; object-fit: contain;">
                         </div>
 
                             <h3>Opening MTECH</h3>
                             <p>Redirecting you to Mountainland Technical College…</p>
+
+                            <div class="loading-dots">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+
+
                         </div>
 
                     </div>
@@ -365,7 +400,9 @@
 
 
     
-<!-- Projects Section -->
+     <!-- ===========================================
+                    PROJECTS SECTION
+     ===============================================-->
     <div class="row mt-1 gy-4 gx-0 align-items-start">
 
     <!-- Projects -->
@@ -374,6 +411,10 @@
             <div class="card-body-projects" style="background-color: #e7f1ff; color: #084298; border: 1px solid #c5c9ce; border-radius: 5px;">
                 <h2 style="letter-spacing: 5px; font-weight: bold;">Projects</h2>
 
+
+
+
+            <div id="redirect-overlay" class="redirect-overlay d-none"></div>
                 <div class="row g-3">
                     <div th:each="project : ${projectsList}"
                          class="col-12 col-md-6">
@@ -386,14 +427,40 @@
                                 </p>
 
                                 <!-- Project button with data-url attribute -->
-                                <button class="btn btn-primary project-button"
-                                    th:attr="data-url=${project.projectUrl}">
-                                        View Project
-                                </button>
 
-                                <p class="redirect-message alert alert-info mt-3 d-none">
-                                    Redirecting you to the project...
-                                </p>
+                                <!-- PROJECT button and message -->
+                <div th:if="${project.name == 'Cloud Task Manager'}">
+
+                    <button class="btn btn-primary project-button"
+                        th:attr="data-url=${project.projectUrl}"
+                        data-message="cloud-task-manager-message"
+                        type="button">
+                            Visit Project
+                    </button>
+
+                <div id="cloud-task-manager-message"
+                    class="project-redirect-message cloud-task-panel d-none position-fixed">
+
+                <div class="circle-holder">
+                    <img th:src="@{/svg images/graduation-cap-svgrepo-com.svg}"
+                        alt="Cloud Task Manager icon"
+                        class="img-fluid">
+                </div>
+
+                    <h3>Opening Cloud Task Manager</h3>
+
+                        <p>Redirecting you to Cloud Task Manager…</p>
+
+                    <div class="loading-dots">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                </div>
+
+                                </div>
+
                           
                             </div>
                         </div>
@@ -408,9 +475,16 @@
 </main> <!-- End of main content -->
     </div> <!-- End of row -->
 </div> <!-- End of container-fluid -->
-<!--Link to JS-->
+
+
+
+
+     <!-- ===========================================
+                    JAVASCRIPT FILES
+     ===============================================-->
 <script th:src="@{/javascript/home-page.js}"></script>
-<script th:src="@{/javascript/school-redirect-messages.js}"></script>
+<script th:src="@{/javascript/redirect-messages.js}"></script>
+
 
 </body>
 </html>
