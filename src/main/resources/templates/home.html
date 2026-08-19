@@ -26,22 +26,30 @@
 
 
 
-    <!-- Navigation bar -->
+                   <!-- ===========================================
+                                NAVIGATION BAR
+                ===============================================-->
 <div class="container-fluid">
     <div class="row min-vh-100">
 
-        <!-- Left navigation bar -->
+                    <!-- ===========================================
+                                LEFT NAVIGATION BAR
+                ===============================================-->
         <nav class="sidebar col-12 col-md-3 col-lg-2 p-3 shadow overflow-auto align-self-start"
             style="height: 100dvh; position: sticky; top: 0; background-color: #e7f1ff;">
 
             <img src ="images/NEWPVLOGO.png" alt="Pv Logo" class="img-fluid;" style="max-width: 100px; margin-bottom: 10px;">
 
-            <!-- Navigation links -->
+                <!-- ===========================================
+                                NAVIGATION LINKS
+                ===============================================-->
             <div class="nav flex-column gap-1">
                 <h2 class="fw-bold fs-5 text-secondary mt-5">Essentials</h2>
 
 
-            <!-- Resume link with icon -->
+                <!-- ===========================================
+                                RESUME LINK WITH ICON
+                ===============================================-->
             <a href="assets/Jackson's Resume.pdf" target="_blank"
                     class="resume d-flex align-items-center gap-2 p-2 text-dark text-decoration-none">
 
@@ -56,7 +64,9 @@
             </a>
 
 
-            <!-- Projects link with icon -->
+                <!-- ===========================================
+                                PROJECTS LINKS WITH ICON
+                ===============================================-->
             
             <div class="linkedin d-flex align-items-center gap-2 p-2 text-dark text-decoration-none">
 
@@ -202,7 +212,9 @@
 
             <hr class="text-secondary opacity-25 my-3">
 
-                        <!-- Skills -->
+                <!-- ===========================================
+                                SKILLS (LEFT NAVIGATION BAR)
+                ===============================================-->
             <div class="nav flex-column gap-1">
                 <h2 class="fw-bold fs-5 text-secondary">Skills</h2>
                 <p class="text-dark mb-0">Java, Spring Boot, Thymeleaf, HTML, CSS, 
@@ -301,11 +313,12 @@
 
                         <img th:src="${skill.imageUrl}"
                              th:alt="${skill.name}"
-                             style="width: 45px; height: 45px; object-fit: contain;">
+                             style="width: 45px; height: 45px; object-fit: contain; margin-left: 10px;">
 
                         <div class="flex-grow-1">
                             <h3 class="fs-6 mb-2"
-                                th:text="${skill.name}">
+                                th:text="${skill.name}"
+                                style="font-weight: bold; letter-spacing: 2px;">
                                 Skill
                             </h3>
 
