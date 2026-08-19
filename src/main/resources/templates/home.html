@@ -17,8 +17,9 @@
     <link rel="stylesheet" th:href="@{/css/home-page.css}">
     <link rel="stylesheet" th:href="@{/css/cards.css}">
     <link rel="stylesheet" th:href="@{/css/sidebar.css}">
-    <link rel="stylesheet" th:href="@{/css/school-redirect-messages.css}">
     <link rel="stylesheet" th:href="@{/css/project-redirect-messages.css}">
+    <link rel="stylesheet" th:href="@{/css/school-redirect-messages.css}">
+
 
 </head>
 <body>
@@ -44,11 +45,14 @@
             <a href="assets/Jackson's Resume.pdf" target="_blank"
                     class="resume d-flex align-items-center gap-2 p-2 text-dark text-decoration-none">
 
-                <img th:src="@{/svg images/briefcase-svgrepo-com (1).svg}"
+                    <div class="circle-holder d-flex justify-content-center align-items-center" style="height: 40px; background-color: rgb(255, 255, 255);
+                     border-radius: 50%; margin-top: 5px; width: 40px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);">
+                <img th:src="@{/images/resume_icon.png}"
                      alt="Resume icon"
                      class="img-fluid"
-                     style="max-width: 20px;">
-            <span>Resume</span>
+                     style="max-width: 30px;">
+            </div>
+            <span style="font-weight: bold; letter-spacing: 2px;">Resume</span>
             </a>
 
 
@@ -56,67 +60,90 @@
             
             <div class="linkedin d-flex align-items-center gap-2 p-2 text-dark text-decoration-none">
 
-                <img th:src="@{/svg images/trophy-material-4-svgrepo-com.svg}"
+
+            <div class="circle-holder d-flex justify-content-center align-items-center" style="height: 40px; background-color: rgb(255, 255, 255);
+                     border-radius: 50%; margin-top: 5px; width: 40px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);">
+                <img th:src="@{/images/icons8-trophy-100.png}"
                      alt="Linkedin icon"
                      class="img-fluid"
-                     style="max-width: 20px;">
-            <span>Projects</span>
+                     style="max-width: 30px;">
+            </div>
+            <span style="font-weight: bold; letter-spacing: 2px;">Projects</span>
 
             </div>
             </div>
 
             <hr class="text-secondary opacity-25 my-3">
 
-            <!-- Contact information -->
+                <!-- ===========================================
+                                CONTACT INFORMATION
+                ===============================================-->
             <div class="nav flex-column gap-1">
                 <h2 class="fw-bold fs-5 text-secondary">Contact</h2>
                 <!-- Email link with icon -->
             <a href="mailto:jackson@example.com"
                     class="email d-flex align-items-center gap-2 p-2 text-dark text-decoration-none">
 
-                <img th:src="@{/svg images/email-1572-svgrepo-com.svg}"
+            <div class="circle-holder d-flex justify-content-center align-items-center" style="height: 40px; background-color: rgb(255, 255, 255);
+                     border-radius: 50%; margin-top: 5px; width: 40px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);">
+                <img th:src="@{/images/email_icon.png}"
                      alt="Email icon"
                      class="img-fluid"
                      style="max-width: 25px;">
 
-            <span>Email</span>
-            
+            </div>
+            <span style="font-weight: bold; letter-spacing: 2px;">Email</span>
             </a>
 
 
-            <!-- LinkedIn link with icon -->
+                <!-- ===========================================
+                               LINKEDIN WITH ICON
+                ===============================================-->
             <a href="https://www.linkedin.com/in/jackson-wiser" target="_blank"
                     class="linkedin d-flex align-items-center gap-2 p-2 text-dark text-decoration-none">
 
-                <img th:src="@{/svg images/linkedin-161-svgrepo-com (1).svg}"
+                <div class="circle-holder d-flex justify-content-center align-items-center" style="height: 40px; background-color: rgb(255, 255, 255);
+                     border-radius: 50%; margin-top: 5px; width: 40px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);">
+                <img th:src="@{/images/linkedin_icon.png}"
                      alt="Linkedin icon"
                      class="img-fluid"
-                     style="max-width: 20px;">
-            <span>Linkedin</span>
+                     style="max-width: 25px;">
+                </div>
+            <span style="font-weight: bold; letter-spacing: 2px;">Linkedin</span>
             </a>
 
 
-            <!-- Github link with icon -->
+                <!-- ===========================================
+                                GITHUB 
+                ===============================================-->
             <a href="https://github.com/PeakValo05" target="_blank"
                     class="github d-flex align-items-center gap-2 p-2 text-dark text-decoration-none">
 
-                <img th:src="@{/svg images/github-svgrepo-com (1).svg}"
+                <div class="circle-holder d-flex justify-content-center align-items-center" style="height: 40px; background-color: rgb(255, 255, 255);
+                     border-radius: 50%; margin-top: 5px; width: 40px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);">
+                <img th:src="@{/images/github_icon.png}"
                      alt="Github icon"
                      class="img-fluid"
                      style="max-width: 25px;">
-            <span>Github</span>
+                </div>
+            <span style="font-weight: bold; letter-spacing: 2px;">Github</span>
             </a>
 
 
-            <!-- Number link with icon -->
+                <!-- ===========================================
+                               NUMBER AND LOCATION
+                ===============================================-->
             <a href="tel:+4258797310"
                     class="phone d-flex align-items-center gap-1 p-2 text-dark text-decoration-none">
 
-                <img th:src="@{/svg images/phone-svgrepo-com (2).svg}"
+                <div class="circle-holder d-flex justify-content-center align-items-center" style="height: 40px; background-color: rgb(255, 255, 255);
+                     border-radius: 50%; margin-top: 5px; width: 40px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);">
+                <img th:src="@{/images/phone_icon.png}"
                      alt="Phone icon"
                      class="img-fluid"
-                     style="max-width: 30px;">
-            <span>Phone</span>
+                     style="max-width: 25px;">
+                </div>
+            <span style="margin-left: 5px; font-weight: bold; letter-spacing: 2px;">Phone</span>
             </a>
 
 
@@ -126,38 +153,50 @@
 
             <hr class="text-secondary opacity-25 my-3">
 
-            <!-- Location and availability -->
+                <!-- ===========================================
+                                LOCATION AND AVAILABILITY
+                ===============================================-->
             <div class="nav flex-column gap-1">
             <div class="location d-flex align-items-center gap-2 p-2 text-dark text-decoration-none">
 
-                <img th:src="@{/svg images/location-svgrepo-com (1).svg}"
+
+            <div class="circle-holder d-flex justify-content-center align-items-center" style="height: 40px; background-color: rgb(255, 255, 255);
+                     border-radius: 50%; margin-top: 5px; width: 40px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);">
+                <img th:src="@{/images/location_icon.png}"
                      alt="Location icon"
                      class="img-fluid"
                      style="max-width: 20px;">
-            <span>Bluffdale, UT</span>
+            </div>  
+            <span style="font-weight: bold; letter-spacing: 2px;">Bluffdale, UT</span>
             </div>
-                        <!-- Open to new opportunities-->
+                            <!-- ===========================================
+                                             OPEN TO NEW OPPORTUNITIES
+                            ===============================================-->
             
             <div class="availability d-flex align-items-center gap-2 p-2 text-dark text-decoration-none">
 
-                <img th:src="@{/svg images/calender-svgrepo-com.svg}"
+            <div class="circle-holder d-flex justify-content-center align-items-center" style="height: 40px; background-color: rgb(255, 255, 255);
+                     border-radius: 50%; margin-top: 5px; width: 40px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);">
+                <img th:src="@{/images/calendar_icon.png}"
                      alt="Availability icon"
                      class="img-fluid"
                      style="max-width: 20px;">
-            <span>Open to new opportunities</span>
-            </div>
+            </div>  
+            <span style="font-weight: bold; letter-spacing: 2px;">Open to new opportunities</span>
 
         </div>
 
             <hr class="text-secondary opacity-25 my-3">
 
-            <!-- Work experience -->
+                <!-- ===========================================
+                                WORK EXPERIENCE
+                ===============================================-->
             <div class="nav flex-column gap-1">
                 <h2 class="fw-bold fs-5 text-secondary mb-2">Work Experience</h2>
-                <strong class="text-dark">Costco Wholesale</strong>
+                <strong class="text-dark" style="letter-spacing: 2px;">Costco Wholesale</strong>
                 <p class="text-dark mb-2">Bakery<br> 2021 - Present</p>
      
-                <strong class="text-dark">Cinemark Theaters</strong>
+                <strong class="text-dark" style="letter-spacing: 2px;">Cinemark Theaters</strong>
                 <p class="text-dark mb-0">Floor Staff / Shift Lead<br> 2021 - 2023</p> 
             </div>
 
@@ -285,11 +324,12 @@
         </div>
     </section> <!-- End of skills section -->
 
+    
 
 
     <!-- ===========================================
-                    EDUCATION SECTION 
-     ===============================================-->
+                        EDUCATION SECTION 
+        ===============================================-->
     <section class="col-12 col-lg-7">
         <div class="card shadow border-0 h-100">
             <div class="card-body-education" style="background-color: #e7f1ff; color: #084298; border: 1px solid #c5c9ce; border-radius: 5px;">
@@ -320,10 +360,10 @@
                             class="school-redirect-message mtech-panel d-none w-25 h-25 justify-content-center align-items-center flex-column"
                             style="color: #084298; border: 1px solid #c5c9ce;">
 
-                    <div class="circle-holder d-flex justify-content-center align-items-center" style="height: 70px; background-color: rgb(193, 207, 248);
-                     border-radius: 50%; margin-top: 10px; width: 70px; margin-left: auto; margin-right: auto; padding-top: 10px;">
+                    <div class="circle-holder d-flex justify-content-center align-items-center" style="height: 70px; background-color: rgb(255, 255, 255);
+                     border-radius: 50%; margin-top: 10px; width: 70px; margin-left: auto; margin-right: auto; padding-top: 10px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);">
 
-                            <img th:src="@{/svg images/graduation-cap-svgrepo-com.svg}"
+                            <img th:src="@{/images/icons8-purple-graduation-cap-100.png}"
                                  alt="graduation cap Logo"
                                  class="img-fluid"
                                  style="width: 50px; height: 50px; object-fit: contain;">
@@ -344,9 +384,6 @@
                         </div>
 
 
-
-
-
                         <!-- ===========================================
                                     MTECH button and message 
                         ===============================================-->
@@ -363,10 +400,10 @@
                             class="school-redirect-message mtech-panel d-none w-25 justify-content-center align-items-center flex-column"
                             style="color: #084298; border: 1px solid #c5c9ce;">
 
-                    <div class="circle-holder d-flex justify-content-center align-items-center" style="height: 70px; background-color: rgb(193, 207, 248);
-                     border-radius: 50%; margin-top: 10px; width: 70px; margin-left: auto; margin-right: auto; padding-top: 10px;">
+                    <div class="circle-holder d-flex justify-content-center align-items-center" style="height: 70px; background-color: rgb(255, 255, 255);
+                     border-radius: 50%; margin-top: 10px; width: 70px; margin-left: auto; margin-right: auto; padding-top: 10px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);">
 
-                            <img th:src="@{/svg images/graduation-cap-svgrepo-com.svg}"
+                            <img th:src="@{/images/icons8-purple-graduation-cap-100.png}"
                                  alt="graduation cap Logo"
                                  class="img-fluid"
                                  style="width: 50px; height: 50px; object-fit: contain;">
@@ -397,9 +434,6 @@
         </div>
     </section> <!-- End of education section -->
 
-
-
-    
      <!-- ===========================================
                     PROJECTS SECTION
      ===============================================-->
@@ -426,9 +460,11 @@
                                     Description
                                 </p>
 
-                                <!-- Project button with data-url attribute -->
+                              
 
-                                <!-- PROJECT button and message -->
+                    <!-- ===========================================
+                            CLOUD TASK MANAGER project button and message
+                    ===============================================-->
                 <div th:if="${project.name == 'Cloud Task Manager'}">
 
                     <button class="btn btn-primary project-button"
@@ -441,31 +477,67 @@
                 <div id="cloud-task-manager-message"
                     class="project-redirect-message cloud-task-panel d-none position-fixed">
 
-                <div class="circle-holder">
-                    <img th:src="@{/svg images/graduation-cap-svgrepo-com.svg}"
+
+                    <!-- ===========================================
+                        CIRCLE HOLDER AND ICON
+                    ===============================================-->
+                <div class="circle-holder" style="height: 70px; background-color: rgb(255, 255, 255);
+                     border-radius: 50%; margin-top: 10px; width: 70px; margin-left: auto; margin-right: auto; padding-top: 10px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);">
+                    <img th:src="@{/images/icons8-trophy-100.png}"
                         alt="Cloud Task Manager icon"
-                        class="img-fluid">
+                        class="img-fluid" style="width: 50px; height: 50px; object-fit: contain;">
                 </div>
 
                     <h3>Opening Cloud Task Manager</h3>
-
-                        <p>Redirecting you to Cloud Task Manager…</p>
+                    <p>Redirecting you to Cloud Task Manager…</p>
 
                     <div class="loading-dots">
                         <span></span>
                         <span></span>
                         <span></span>
-                    </div>
+                    </div> <!-- End of loading dots animation -->
+                </div> <!-- End of cloud task manager message -->
+                </div> <!-- End of project button and message -->
 
+
+
+                     <!-- ===========================================
+                            PORTFOLIO project button and message
+                    ===============================================-->
+                <div th:if="${project.name == 'Jackson''s Developer Portfolio'}">
+                    <button class="btn btn-primary project-button"
+                        th:attr="data-url=${project.projectUrl}"
+                        data-message="portfolio-website-message"
+                        type="button">
+                            Visit Project
+                    </button>
+                <div id="portfolio-website-message"
+                    class="project-redirect-message cloud-task-panel d-none position-fixed">
+
+                <div class="circle-holder" style="height: 70px; background-color: rgb(255, 255, 255);
+                     border-radius: 50%; margin-top: 10px; width: 70px; margin-left: auto; margin-right: auto; padding-top: 10px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);">
+                    <img th:src="@{/images/icons8-trophy-100.png}"
+                        alt="Portfolio Trophy icon"
+                        class="img-fluid" style="width: 50px; height: 50px; object-fit: contain;">
                 </div>
 
-                                </div>
+                    <h3>Opening Jackson's Developer Portfolio</h3>
+                    <p>Redirecting you to Jackson's Developer Portfolio…</p>
 
-                          
-                            </div>
-                        </div>
 
-                    </div>
+
+                    <div class="loading-dots">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div> <!-- End of loading dots animation -->
+                </div> <!-- End of cloud task manager message -->
+                </div> <!-- End of project button and message -->
+                                </div> <!-- End of card body -->
+                            </div> <!-- End of card -->
+
+                        </div> <!-- End of project column -->
+                    </div> <!-- End of row -->
                 </div>
             </div>
         </div>

@@ -2,6 +2,7 @@ const schoolButtons = document.querySelectorAll(".school-button");
 const overlay = document.getElementById("redirect-overlay");
 const projectButtons = document.querySelectorAll(".project-button");
 
+
 schoolButtons.forEach(function (button) {
     button.addEventListener("click", function () {
         const schoolUrl = button.dataset.url;

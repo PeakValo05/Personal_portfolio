@@ -1,9 +1,9 @@
 /* Redirect message animation */
-.project-redirect-message {
+.project-redirect-message, .portfolio-website-message {
     top: 30%;
     left: 50%;
     z-index: 1000;
-
+    
     width: min(90%, 450px);
     min-height: 300px;
     padding: 30px;

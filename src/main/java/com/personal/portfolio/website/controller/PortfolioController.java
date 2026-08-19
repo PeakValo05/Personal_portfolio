@@ -54,7 +54,7 @@ public class PortfolioController {
         List<Education> educationList = (List<Education>) educationService.getAllEducations();
         model.addAttribute("educationList", educationList);
 
-        return "home";
+        return "home"; // or "main-body" depending on which template you want to render
     }
 
 }
