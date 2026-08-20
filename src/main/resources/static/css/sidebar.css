@@ -30,7 +30,3 @@ body {
     border-radius: 20px;
 }
 
-/* Optional: Change the color of the scrollbar thumb on hover */
-.sidebar::-webkit-scrollbar-thumb:hover {
-    background: #8b929a;
-}

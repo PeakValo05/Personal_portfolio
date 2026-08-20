@@ -1,0 +1,42 @@
+.skills-label, .essential-label, .contact-label, .experience-label {
+    display: flex;
+    margin: 0;
+
+    color: #888888;
+    font-family: "Fredoka", sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+
+}
+.skills-label span, .essential-label span, .contact-label span, .experience-label span {
+    display: inline-block;
+    transform: translateY(0);
+    transition: transform 0.3s ease-in-out;
+    animation: letter-wave 2s infinite;
+}
+
+
+
+.skills-label span:nth-child(1), .essential-label span:nth-child(1), .contact-label span:nth-child(1), .experience-label span:nth-child(1) { animation-delay: 0s; }
+.skills-label span:nth-child(2), .essential-label span:nth-child(2), .contact-label span:nth-child(2), .experience-label span:nth-child(2) { animation-delay: 0.08s; }
+.skills-label span:nth-child(3), .essential-label span:nth-child(3), .contact-label span:nth-child(3), .experience-label span:nth-child(3) { animation-delay: 0.16s; }
+.skills-label span:nth-child(4), .essential-label span:nth-child(4), .contact-label span:nth-child(4), .experience-label span:nth-child(4) { animation-delay: 0.24s; }
+.skills-label span:nth-child(5), .essential-label span:nth-child(5), .contact-label span:nth-child(5), .experience-label span:nth-child(5) { animation-delay: 0.32s; }
+.skills-label span:nth-child(6), .essential-label span:nth-child(6), .contact-label span:nth-child(6), .experience-label span:nth-child(6) { animation-delay: 0.40s; }
+.skills-label span:nth-child(7), .essential-label span:nth-child(7), .contact-label span:nth-child(7), .experience-label span:nth-child(7) { animation-delay: 0.48s; }
+.skills-label span:nth-child(8), .essential-label span:nth-child(8), .contact-label span:nth-child(8), .experience-label span:nth-child(8) { animation-delay: 0.56s; }
+.skills-label span:nth-child(9), .essential-label span:nth-child(9), .contact-label span:nth-child(9), .experience-label span:nth-child(9) { animation-delay: 0.64s; }
+.skills-label span:nth-child(10), .essential-label span:nth-child(10), .contact-label span:nth-child(10), .experience-label span:nth-child(10) { animation-delay: 0.72s; }
+
+@keyframes letter-wave {
+    0%,
+    30%,
+    100% {
+        transform: translateY(0);
+    }
+
+    15% {
+        transform: translateY(-10px);
+    }
+}
