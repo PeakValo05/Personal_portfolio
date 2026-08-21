@@ -55,17 +55,13 @@
                                 NAVIGATION LINKS
                 ===============================================-->
             <div class="nav flex-column gap-1">
-                <h2 class="essential-label fw-bold fs-5 text-secondary mt-5">
-                    <span aria-hidden="true">E</span>
-                    <span aria-hidden="true">s</span>
-                    <span aria-hidden="true">s</span>
-                    <span aria-hidden="true">e</span>
-                    <span aria-hidden="true">n</span>
-                    <span aria-hidden="true">t</span>
-                    <span aria-hidden="true">i</span>
-                    <span aria-hidden="true">a</span>
-                    <span aria-hidden="true">l</span>
-                    <span aria-hidden="true">s</span>
+                <h2 class="essential-label fw-bold fs-5 mt-5">Essential Links
+
+                    <img src="images/mail-message.png"
+                         alt="mail icon"
+                         class="essential-links-img"
+                         style="max-width: 35px; margin-left: 5px; margin-bottom: 5px;">
+
                 </h2>
 
 
@@ -111,14 +107,13 @@
                                 CONTACT INFORMATION
                 ===============================================-->
             <div class="nav flex-column gap-1">
-                <h2 class="contact-label fw-bold fs-5 text-secondary">
-                    <span aria-hidden="true">C</span>
-                    <span aria-hidden="true">o</span>
-                    <span aria-hidden="true">n</span>
-                    <span aria-hidden="true">t</span>
-                    <span aria-hidden="true">a</span>
-                    <span aria-hidden="true">c</span>
-                    <span aria-hidden="true">t</span>
+                <h2 class="contact-label fw-bold fs-5">Contact
+
+                    <img src="images/contact.png"
+                         alt="contact icon"
+                         class="contact-img mb-2"
+                         style="max-width: 35px; margin-left: 5px;">
+
                 </h2>
                 <!-- Email link with icon -->
             <a href="mailto:jackson@example.com"
@@ -232,17 +227,11 @@
                                 WORK EXPERIENCE
                 ===============================================-->
             <div class="nav flex-column gap-1">
-                <h2 class="experience-label fw-bold fs-5 text-secondary mb-2">
-                    <span aria-hidden="true">E</span>
-                    <span aria-hidden="true">x</span>
-                    <span aria-hidden="true">p</span>
-                    <span aria-hidden="true">e</span>
-                    <span aria-hidden="true">r</span>
-                    <span aria-hidden="true">i</span>
-                    <span aria-hidden="true">e</span>
-                    <span aria-hidden="true">n</span>
-                    <span aria-hidden="true">c</span>
-                    <span aria-hidden="true">e</span>
+                <h2 class="experience-label fw-bold fs-5 mb-2">Experience
+                    <img  src="images/experience.png"
+                         alt="work icon"
+                         class="experience-img"
+                         style="max-width: 35px; margin-left: 5px; margin-bottom: 5px;">
                 </h2>
                 <strong class="text-dark" style="letter-spacing: 2px;">Costco Wholesale</strong>
                 <p class="text-dark mb-2">Bakery<br> 2021 - Present</p>
@@ -251,23 +240,7 @@
                 <p class="text-dark mb-0">Floor Staff / Shift Lead<br> 2021 - 2023</p> 
             </div>
 
-            <hr class="text-secondary opacity-25 my-3">
 
-                <!-- ===========================================
-                                SKILLS (LEFT NAVIGATION BAR)
-                ===============================================-->
-            <div class="nav flex-column gap-1">
-                <h2 class="skills-label fw-bold fs-5">
-                    <span aria-hidden="true">S</span>
-                    <span aria-hidden="true">k</span>
-                    <span aria-hidden="true">i</span>
-                    <span aria-hidden="true">l</span>
-                    <span aria-hidden="true">l</span>
-                    <span aria-hidden="true">s</span>
-                </h2>
-                <p class="text-dark mb-0">Java, Spring Boot, Thymeleaf, HTML, CSS, 
-                    JavaScript, Bootstraps, Database design, Git, GitHub, Cloud, MySQL, MongoDB</p>
-            </div>
         </nav> <!-- End of left navigation bar -->
 
 
@@ -294,7 +267,7 @@
             type="text"
             id="search-box"
             name="search"
-            placeholder="Search projects, email, resume..."
+            placeholder="Say hi!..."
 
             >
             <button type="submit" class="btn btn-primary me-2">Search</button>
@@ -335,12 +308,39 @@
     <!-- ===========================================
                     ANALYTICS SECTION
      ===============================================-->
-<section class="analytics-body col-12 col-md-9 col-lg-10 mt-4 d-flex flex-row align-items-center gap-3 w-100">
-    <div th:each ="analytics : ${analyticsList}" class="card shadow w-50" style="height: 250px; background-color: #e7f1ff;">
-            <h1 class="analytics-card-title text-center mb-4" th:text="${analytics.name}">CARD 2</h1>
-            <p class="analytics-card-text text-center mb-4" th:text="${analytics.quantity} + '+'">Quantity</p>
+<section class="analytics-body col-12 mt-4 d-flex flex-row gap-3 w-100">
+
+    <div th:each="analytics : ${analyticsList}"
+         class="card shadow flex-fill"
+         style="height: 250px; background-color: #e7f1ff;">
+
+        <div class="card-body d-flex flex-column align-items-center">
+
+            <!-- Title and icon row -->
+            <div class="d-flex justify-content-center align-items-center gap-2 mb-4">
+
+                <h1 class="analytics-card-title text-center mb-0"
+                    th:text="${analytics.name}">
+                    Analytics
+                </h1>
+
+                <img th:src="${analytics.imageUrl}"
+                     th:alt="${analytics.name + ' icon'}"
+                     class="analytics-img">
+
+            </div>
+
+            <!-- Quantity -->
+            <p class="analytics-card-text text-center mt-auto mb-4"
+               th:text="${analytics.quantity} + '+'">
+                Quantity
+            </p>
+
         </div>
-</section> <!-- End of analytics section -->
+
+    </div>
+
+</section>
 
 
 
@@ -353,7 +353,15 @@
         <div class="card shadow border-0 h-100">
             <div class="card-body-skills" style="background-color: #e7f1ff; color: #084298; border: 1px solid #c5c9ce; border-radius: 5px;">
 
-                <h2 style="letter-spacing: 5px; font-weight: bold;">Skills</h2>
+                <h2 style="letter-spacing: 5px; font-weight: bold;">Skills
+
+                    <!-- SKILLS IMAGE -->
+
+                        <img th:src="@{/images/skills.png}"
+                            alt="skills icon"
+                            class="skills-img"
+                            style="width: 40px; height: 40px; object-fit: contain;">
+                </h2>
 
                 <div style="overflow-y: auto; max-height: 320px;">
                     <div th:each="skill : ${skillsList}"
@@ -368,6 +376,7 @@
                                 th:text="${skill.name}"
                                 style="font-weight: bold; letter-spacing: 2px;">
                                 Skill
+               
                             </h3>
 
                             <div class="progress" style="height: 13px;">
@@ -394,7 +403,12 @@
     <section class="col-12 col-lg-7">
         <div class="card shadow border-0 h-100">
             <div class="card-body-education" style="background-color: #e7f1ff; color: #084298; border: 1px solid #c5c9ce; border-radius: 5px;">
-                <h2 style="letter-spacing: 5px; font-weight: bold;">Education</h2>
+                <h2 style="letter-spacing: 5px; font-weight: bold;">Education
+                    <img th:src="@{/images/education.png}"
+                         alt="education icon"
+                         class="education-img"
+                         style="width: 40px; height: 40px; object-fit: contain;">
+                </h2>
 
                 <div class="row g-3">
                     <div th:each="education : ${educationList}"
@@ -504,7 +518,14 @@
     <section class="col-12" style="padding-left: 12px; padding-right: 12px;">
         <div class="card shadow border-0 w-100">
             <div class="card-body-projects" style="background-color: #e7f1ff; color: #084298; border: 1px solid #c5c9ce; border-radius: 5px;">
-                <h2 style="letter-spacing: 5px; font-weight: bold;">Projects</h2>
+                <h2 style="letter-spacing: 5px; font-weight: bold;">Projects
+
+                    <!-- PROJECTS IMAGE -->
+                    <img th:src="@{/images/projects-folder.png}"
+                         alt="projects icon"
+                         class="projects-img"
+                         style="width: 40px; height: 40px; object-fit: contain;">
+                </h2>
 
 
 
@@ -617,6 +638,7 @@
      ===============================================-->
 <script th:src="@{/javascript/home-page.js}"></script>
 <script th:src="@{/javascript/redirect-messages.js}"></script>
+<script th:src="@{/javascript/chat-messages.js}"></script>
 
 
 </body>

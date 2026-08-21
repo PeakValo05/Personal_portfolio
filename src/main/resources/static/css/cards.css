@@ -10,6 +10,7 @@ html, body {
     color: #333;
     padding-top: 10px;
     letter-spacing: 5px;
+    font-family: "Fredoka", sans-serif;
 }
 .analytics-card-text {
     font-size: 2.5rem;
@@ -38,22 +39,33 @@ html, body {
     scrollbar-color: #c5c9ce transparent;
 
 }
+
 .card-body-projects,
 .card-body-skills {
     height: 100%;
     color: #084298;
     background-color: #e7f1ff;
+    
 
     scrollbar-width: thin;
     scrollbar-color: #c5c9ce transparent;
 }
-
+/* Headers for each card */
 .card-body-projects h2,
 .card-body-skills h2,
 .card-body-education h2 {
-    padding-left: 10px;
+    padding: 20px 20px 20px 20px;
+    font-family: "Fredoka", sans-serif;
 }
-
+.skills-img, .education-img, .projects-img {
+    transform: translate(-5px, -5px);
+}
+.analytics-img {
+    max-width: 40px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    transform: translateY(6px);
+}
 
 
 

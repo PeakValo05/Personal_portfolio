@@ -16,12 +16,16 @@ public class Analytics {
     @Column(nullable = false)
     private String quantity;
 
+    @Column(name = "image_url", nullable = false)
+    private String imageUrl;
+
     public Analytics() {
     }
 
-    public Analytics(String name, String quantity) {
+    public Analytics(String name, String quantity, String imageUrl) {
         this.name = name;
         this.quantity = quantity;
+        this.imageUrl = imageUrl;
     }
 
     public Long getId() {
@@ -46,5 +50,13 @@ public class Analytics {
 
     public void setQuantity(String quantity) {
         this.quantity = quantity;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
 }
